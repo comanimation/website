@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Website</title>
+    <!-- Add favicon -->
+    <link rel="icon" type="image/png" href="4284--favicon-32x32.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Consolas', monospace; /* Use Consolas with monospace fallback */
+        }
+
+        /* Ensure the body and html take up the full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Wrapper to push the footer to the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Make sure the main content takes up the remaining space */
+        main {
+            flex: 1 0 auto;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0; /* Remove auto margin to allow left alignment */
+            margin-left: 20px; /* Add some left margin for spacing from the edge */
+            text-align: left; /* Left-align the text */
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo img {
+            height: 80px; /* Logo size */
+            width: auto;
+        }
+
+        .language {
+            display: flex;
+            align-items: center;
+            position: relative; /* For positioning the highlight bar */
+        }
+
+        .language a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 5px;
+            font-size: 14px;
+            padding: 5px 10px; /* Add padding for better hover area */
+            position: relative;
+            z-index: 1; /* Ensure links are above the bar */
+        }
+
+        /* Remove underline on hover for language links */
+        .language a:hover {
+            text-decoration: none; /* Remove the underline on hover */
+        }
+
+        /* Black bar for language hover effect */
+        .language .language-highlight-bar {
+            position: absolute;
+            bottom: 0;
+            height: 3px; /* Thickness of the black bar */
+            background-color: #000;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Fast easing animation with overshoot */
+            z-index: 0; /* Behind the links */
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: center; /* Center the nav links */
+        }
+
+        .nav-links {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 15px;
+            font-size: 14px;
+            padding: 5px 10px; /* Add padding for better hover area */
+            position: relative;
+            z-index: 1; /* Ensure links are above the bar */
+        }
+
+        .nav-links a:hover {
+            text-decoration: none; /* Remove default underline on hover */
+        }
+
+        /* Black bar for nav links hover effect */
+        .nav-links .highlight-bar {
+            position: absolute;
+            bottom: 0;
+            height: 3px; /* Thickness of the black bar */
+            background-color: #000;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Fast easing animation with overshoot */
+            z-index: 0; /* Behind the links */
+        }
+
+        /* Social Icons Below Nav Bar */
+        .social-icons-section {
+            display: flex;
+            justify-content: center; /* Center the icons horizontally */
+            padding: 10px 0; /* Add some vertical padding */
+            background-color: #fff; /* Match the nav bar background */
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 8px; /* Space between YouTube and Twitter icons */
+        }
+
+        .social-icons img {
+            height: 12px; /* Icon size */
+            width: auto;
+        }
+
+        /* Main Content Styles */
+        main h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        footer {
+            flex-shrink: 0; /* Prevent the footer from shrinking */
+            background-color: #333; /* Dark gray background */
+            padding: 20px;
+            display: flex;
+            justify-content: flex-start; /* Left-align the content */
+            align-items: flex-start; /* Align items to the top */
+            flex-direction: column; /* Stack logo vertically */
+        }
+
+        .footer-logo img {
+            height: 40px; /* Size of the inverted logo */
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="3999--apple-touch-icon.png" alt="Company Logo">
+        </div>
+        <div class="language">
+            <a id="jpn-link" href="Company_JPN.html" class="language-link">JPN</a> | <a id="en-link" href="Company.html" class="language-link">EN</a>
+            <div class="language-highlight-bar"></div>
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <div class="nav-links">
+            <a id="company-link" href="Company.html" class="nav-link">COMPANY</a> | <a id="recruit-link" href="Recruit.html" class="nav-link">RECRUIT</a> | <a id="contact-link" href="Contact.html" class="nav-link">CONTACT</a>
+            <div class="highlight-bar"></div>
+        </div>
+    </nav>
+
+    <!-- Social Icons Section Below Nav Bar -->
+    <div class="social-icons-section">
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@COM-Project" target="_blank">
+                <img src="5657898907.vercel.app-YouTube.svg" alt="YouTube Icon">
+            </a>
+            <a href="https://x.com/COM_Animation" target="_blank">
+                <img src="5657898907.vercel.app-Twitter.png" alt="Twitter Icon">
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <main>
+        <h2>Contact</h2>
+        <p>If you would like to contact us regarding business related matters or anything else, feel free to reach out to the project lead</p>
+        <p>‎ </p>
+        <p>Gmail: cyrus.rebello8088@gmail.com</p>
+        <p>‎Twitter: @cyrus_rebello</p>
+        <p>‎ </p>
+        <p>‎ </p>
+        <p>‎ </p>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-logo">
+            <img src="https://comanimation.github.io/website/Logowhite.png">
+        </div>
+    </footer>
+
+    <script>
+        // Variables to control the default selected links
+        const defaultNavLink = 'CONTACT'; // Options: 'COMPANY', 'RECRUIT', 'CONTACT'
+        const defaultLanguageLink = 'EN'; // Options: 'JPN', 'EN'
+
+        // Dynamically set navigation links based on the selected language
+        const companyLink = document.getElementById('company-link');
+        const recruitLink = document.getElementById('recruit-link');
+        const contactLink = document.getElementById('contact-link');
+
+        if (defaultLanguageLink === 'JPN') {
+            companyLink.href = 'Company_JPN.html';
+            recruitLink.href = 'Recruit_JPN.html';
+            contactLink.href = 'Contact_JPN.html';
+        } else {
+            companyLink.href = 'Company.html';
+            recruitLink.href = 'Recruit.html';
+            contactLink.href = 'Contact.html';
+        }
+
+        // Dynamically set the JPN link based on the current page (defaultNavLink)
+        const jpnLink = document.getElementById('jpn-link');
+        if (defaultNavLink === 'COMPANY') {
+            jpnLink.href = 'Company_JPN.html';
+        } else if (defaultNavLink === 'RECRUIT') {
+            jpnLink.href = 'Recruit_JPN.html';
+        } else if (defaultNavLink === 'CONTACT') {
+            jpnLink.href = 'Contact_JPN.html';
+        }
+
+        // Dynamically set the EN link based on the current page (defaultNavLink)
+        const enLink = document.getElementById('en-link');
+        if (defaultNavLink === 'COMPANY') {
+            enLink.href = 'Company.html';
+        } else if (defaultNavLink === 'RECRUIT') {
+            enLink.href = 'Recruit.html';
+        } else if (defaultNavLink === 'CONTACT') {
+            enLink.href = 'Contact.html';
+        }
+
+        // JavaScript for the navigation links black bar animation
+        const navLinks = document.querySelectorAll('.nav-link');
+        const highlightBar = document.querySelector('.highlight-bar');
+
+        // Find the default nav link based on the variable
+        const defaultNavLinkElement = Array.from(navLinks).find(link => link.textContent === defaultNavLink);
+
+        // Set default position for the nav bar (under the default link)
+        if (defaultNavLinkElement) {
+            highlightBar.style.width = `${defaultNavLinkElement.offsetWidth}px`;
+            highlightBar.style.left = `${defaultNavLinkElement.offsetLeft}px`;
+        }
+
+        // Add hover event listeners to each nav link
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                highlightBar.style.width = `${link.offsetWidth}px`;
+                highlightBar.style.left = `${link.offsetLeft}px`;
+            });
+        });
+
+        // Add click event listeners to prevent navigation on the selected link
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                if (link.textContent === defaultNavLink) {
+                    event.preventDefault(); // Prevent navigation if the link is the selected one
+                }
+            });
+        });
+
+        // Reset nav bar position when leaving the nav area
+        document.querySelector('.nav-links').addEventListener('mouseleave', () => {
+            if (defaultNavLinkElement) {
+                highlightBar.style.width = `${defaultNavLinkElement.offsetWidth}px`;
+                highlightBar.style.left = `${defaultNavLinkElement.offsetLeft}px`;
+            }
+        });
+
+        // JavaScript for the language links black bar animation
+        const languageLinks = document.querySelectorAll('.language-link');
+        const languageHighlightBar = document.querySelector('.language-highlight-bar');
+
+        // Find the default language link based on the variable
+        const defaultLanguageLinkElement = Array.from(languageLinks).find(link => link.textContent === defaultLanguageLink);
+
+        // Set default position for the language bar (under the default link)
+        if (defaultLanguageLinkElement) {
+            languageHighlightBar.style.width = `${defaultLanguageLinkElement.offsetWidth}px`;
+            languageHighlightBar.style.left = `${defaultLanguageLinkElement.offsetLeft}px`;
+        }
+
+        // Add hover event listeners to each language link
+        languageLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                languageHighlightBar.style.width = `${link.offsetWidth}px`;
+                languageHighlightBar.style.left = `${link.offsetLeft}px`;
+            });
+        });
+
+        // Add click event listeners to prevent navigation on the selected language link
+        languageLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                if (link.textContent === defaultLanguageLink) {
+                    event.preventDefault(); // Prevent navigation if the link is the selected one
+                }
+            });
+        });
+
+        // Reset language bar position when leaving the language area
+        document.querySelector('.language').addEventListener('mouseleave', () => {
+            if (defaultLanguageLinkElement) {
+                languageHighlightBar.style.width = `${defaultLanguageLinkElement.offsetWidth}px`;
+                languageHighlightBar.style.left = `${defaultLanguageLinkElement.offsetLeft}px`;
+            }
+        });
+    </script>
+</body>
+</html>
